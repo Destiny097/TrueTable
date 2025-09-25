@@ -6,7 +6,7 @@ function HeroSection() {
   return (
     <section className="w-full bg-[#E9DFC3] flex flex-col items-center justify-center  py-8" 
     style={{
-    background: 'linear-gradient(30deg, #FFF8F8 0%, #E9DFC3 100%)'
+    background: 'linear-gradient(30deg, #FFF8F8 10%, #E9DFC3 100%)'
     }}>
       <div className="max-w-7xl w-full h-[80%] flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 mt-20">
         {/* Left Side: Text */}

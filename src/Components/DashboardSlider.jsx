@@ -1,16 +1,16 @@
 import React, { useState } from 'react'
-import img1 from '../assets/Dashboard1.jpg'
-import img2 from '../assets/Dashboard2.jpg'
-import img3 from '../assets/Dashboard3.png'
+import img1 from '../assets/Dashboard_Inventory.png'
+import img2 from '../assets/Dashboard_finance.png'
+import img3 from '../assets/Dashboard_order.png'
 import img4 from '../assets/Dashbaord4.jpg'
-import img5 from '../assets/Dashboard5.jpg'
+import img5 from '../assets/Dashboard_Staff.png'
 
 const tabs = [
   { label: 'Inventory Dashboard', img: img1 },
   { label: 'Finance Overview', img: img2 },
   { label: 'WhatsApp Ordering', img: img3 },
   { label: 'Business Intelligence', img: img4 },
-  { label: 'Staff Payroll', img: img5 },
+  { label: 'Staff Management', img: img5 },
   
 ]
 

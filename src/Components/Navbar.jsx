@@ -17,7 +17,6 @@ export default function Navbar() {
             <li><a href='#' className='text-[16px] font-medium hover:text-[#0118D8] duration-200 hover:underline decoration-2'>Features</a></li>
             <li><a href='#' className='text-[16px] font-medium hover:text-[#0118D8] duration-200 hover:underline decoration-2'>Pricing</a></li>
             <li><a href='#' className='text-[16px] font-medium hover:text-[#0118D8] duration-200 hover:underline decoration-2'>Contact</a></li>
-            
           </ul>
         </nav>
 

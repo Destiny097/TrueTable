@@ -2,7 +2,8 @@ import { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './Components/Navbar'
 import HeroSection from './pages/HeroSection'
-import DashboardSlider from './Components/DashboardSlider'
+import Carousol from './Components/Carousol'
+import Counter from './Components/Counter'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -15,7 +16,8 @@ function App() {
           element={
           <>
             <HeroSection />
-            
+            <Carousol/>
+            <Counter/>
           </>
           }
         />
