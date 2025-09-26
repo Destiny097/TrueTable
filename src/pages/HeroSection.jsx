@@ -1,7 +1,7 @@
 import React from 'react'
 import heroImg from '../assets/HeroSection1.jpg'
 import DashboardSlider from '../Components/DashboardSlider'
-
+import { Link } from 'react-router-dom'
 function HeroSection() {
   return (
     <section className="w-full bg-[#E9DFC3] flex flex-col items-center justify-center  py-8" 
@@ -18,9 +18,9 @@ function HeroSection() {
             From inventory to hiring, let AI handle your daily operations. You focus on what matters — great food and happy customers.
           </p>
           <div className="flex gap-4">
-            <button className='px-5 py-3 rounded-lg bg-[#0118D8] hover:bg-white cursor-pointer duration-200 text-base sm:text-[18px] font-semibold text-white transition-all hover:text-[#0118D8]'>
-              Book a chat
-            </button>
+            <Link to='/contact'>
+              <button className='px-5 py-2 rounded bg-blue-600 hover:bg-white/70 cursor-pointer duration-200 hidden md:inline text-[16px] transition-all hover:text-[#0118D8] font-medium'>Book a Chat</button>
+            </Link>
           </div>
         </div>
       </div>
