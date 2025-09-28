@@ -1,79 +1,90 @@
 import React from 'react';
 import logo from '../assets/TrueTable_logo.svg';
-
-// Import the specific icons from the Font Awesome (fa) collection in react-icons
 import { FaInstagram, FaLinkedinIn, FaTwitter } from 'react-icons/fa'; 
 
+const primaryBlue = '#0118D8';
+
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className='max-w-full h-[30vh] flex items-center justify-center bg-white border-t border-gray-200'>
-      
-      <div className='w-[85%] mx-auto h-[80%] flex items-start justify-between'>
+    <footer className="w-full mb=10 py-10 bg-white border-t border-gray-200 sm:py-12">
+      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         
-        {/* Logo and Brand Name Section */}
-        <div className='flex flex-col items-center justify-start'>
-          <img src={logo} alt="TrueTable Logo" className='w-[150px] p-0 m-0' />
-          <h2 className='font-bold text-[20px] text-gray-800 mt-2 text-center'>TrueTable</h2>
-        </div>
-
-        {/* Links Section (Product, Company, Legal, Connect) */}
-        <div className='flex-1 flex items-start justify-between pl-20'> 
+        {/* Main Content Area */}
+        <div className="flex flex-col items-start justify-between gap-8 pb-6 border-b border-gray-200 lg:flex-row lg:gap-16">
           
-          {/* Product Column */}
-          <div className='flex flex-col items-start justify-start gap-y-3'>
-            <h3 className='font-bold text-[18px] mb-2'>Product</h3>
-            <a href="#" className="text-gray-600 hover:text-blue-600 transition duration-200">Integrations</a>
-            <a href="#" className="text-gray-600 hover:text-blue-600 transition duration-200">Agents</a>
-            <a href="#" className="text-gray-600 hover:text-blue-600 transition duration-200">FAQ's</a>
+          {/* Logo and Brand */}
+          <div className="flex flex-col items-start w-full mb-6 lg:w-1/4 lg:mb-0">
+            <img src={logo} alt="TrueTable Logo" className="h-12 mb-1 lg:h-24" /> 
+            <h2 className="text-lg font-bold text-gray-800 font-sora">TrueTable</h2>
+            <p className="max-w-xs mt-2 text-xs text-gray-500 font-sora">
+              Restaurant management made simple. Focus on food, we handle the rest.
+            </p>
           </div>
 
-          {/* Company Column */}
-          <div className='flex flex-col items-start justify-start gap-y-3'>
-            <h3 className='font-bold text-[18px] mb-2'>Company</h3>
-            <a href="#" className="text-gray-600 hover:text-blue-600 transition duration-200">Career</a>
-            <a href="#" className="text-gray-600 hover:text-blue-600 transition duration-200">Pricing</a>
-            <a href="#" className="text-gray-600 hover:text-blue-600 transition duration-200">Example</a>
-          </div>
-
-          {/* Legal Column */}
-          <div className='flex flex-col items-start justify-start gap-y-3'>
-            <h3 className='font-bold text-[18px] mb-2'>Legal</h3>
-            <a href="#" className="text-gray-600 hover:text-blue-600 transition duration-200">Privacy Policy</a>
-            <a href="#" className="text-gray-600 hover:text-blue-600 transition duration-200">Terms of Service</a> 
-            <a href="#" className="text-gray-600 hover:text-blue-600 transition duration-200">Contact</a>
-          </div>
-          
-          {/* Social Media (Connect) Column with Icons */}
-          <div className='flex flex-col items-start justify-start gap-y-3'>
-            <h3 className='font-bold text-[18px] mb-2'>Connect</h3>
+          {/* Links */}
+          <div className="grid w-full grid-cols-2 gap-y-8 gap-x-6 sm:grid-cols-4 sm:gap-x-10 lg:gap-x-12 lg:w-3/4"> 
             
-            {/* Icons container */}
-            <div className='flex space-x-4 pt-1'>
-                
-                {/* Instagram Link */}
+            {/* Product Column */}
+            <div className="flex flex-col items-start gap-y-2">
+              <h3 className="mb-1 text-base font-bold text-gray-900 font-sora">Product</h3>
+              <a href="#" className="text-sm text-gray-600 transition duration-200 hover:text-blue-600 font-sora">Integrations</a>
+              <a href="#" className="text-sm text-gray-600 transition duration-200 hover:text-blue-600 font-sora">Agents</a>
+              <a href="#" className="text-sm text-gray-600 transition duration-200 hover:text-blue-600 font-sora">FAQ's</a>
+            </div>
+
+            {/* Company Column */}
+            <div className="flex flex-col items-start gap-y-2">
+              <h3 className="mb-1 text-base font-bold text-gray-900">Company</h3>
+              <a href="#" className="text-sm text-gray-600 transition duration-200 hover:text-blue-600 font-sora">Careers</a>
+              <a href="#" className="text-sm text-gray-600 transition duration-200 hover:text-blue-600 font-sora">Pricing</a>
+              <a href="#" className="text-sm text-gray-600 transition duration-200 hover:text-blue-600 font-sora">Example</a>
+            </div>
+
+            {/* Legal Column */}
+            <div className="flex flex-col items-start gap-y-2">
+              <h3 className="mb-1 text-base font-bold text-gray-900">Legal</h3>
+              <a href="#" className="text-sm text-gray-600 transition duration-200 hover:text-blue-600 font-sora">Privacy Policy</a>
+              <a href="#" className="text-sm text-gray-600 transition duration-200 hover:text-blue-600 font-sora">Terms of Service</a> 
+              <a href="#" className="text-sm text-gray-600 transition duration-200 hover:text-blue-600 font-sora">Contact</a>
+            </div>
+
+            {/* Connect Column */}
+            <div className="flex flex-col items-start gap-y-2">
+              <h3 className="mb-1 text-base font-bold text-gray-900 font-sora">Connect</h3>
+              <div className="flex flex-wrap gap-3 pt-1">
                 <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener noreferrer" 
-                   className="text-gray-500 hover:text-pink-600 transition duration-300 text-2xl" 
+                   className="text-lg text-gray-500 transition duration-300 hover:text-pink-600" 
                    aria-label="Instagram">
                   <FaInstagram /> 
                 </a>
 
-                {/* LinkedIn Link */}
                 <a href="https://linkedin.com/company/yourcompany" target="_blank" rel="noopener noreferrer" 
-                   className="text-gray-500 hover:text-blue-700 transition duration-300 text-2xl" 
+                   style={{ color: primaryBlue }}
+                   className="text-lg transition duration-300 hover:opacity-80"
                    aria-label="LinkedIn">
                   <FaLinkedinIn />
                 </a>
 
-                {/* Twitter Link */}
                 <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer" 
-                   className="text-gray-500 hover:text-blue-400 transition duration-300 text-2xl" 
+                   className="text-lg text-gray-500 transition duration-300 hover:text-blue-400" 
                    aria-label="Twitter">
                   <FaTwitter />
                 </a>
+              </div>
             </div>
+            
           </div>
-          
         </div>
+
+        {/* Copyright */}
+        <div className="pt-4 text-center sm:text-left">
+          <p className="text-sm text-gray-500">
+            &copy; {currentYear} TrueTable. All rights reserved.
+          </p>
+        </div>
+
       </div>
     </footer>
   );

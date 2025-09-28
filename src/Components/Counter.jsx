@@ -45,7 +45,7 @@ export default function StatsSection() {
     <div className={`flex flex-col items-center justify-center p-4 md:p-8 text-center
                      // Only show vertical divider on medium screens and up
                      md:border-r border-gray-600 ${isLast ? 'md:border-r-0' : ''}`}>
-      <div className="text-[#E9DFC3] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-2">
+      <div className="mb-2 text-4xl font-bold text-white font-sora sm:text-5xl md:text-6xl lg:text-7xl">
         <Counter 
             from={0} 
             to={to} 
@@ -55,20 +55,20 @@ export default function StatsSection() {
             trigger={inView} 
         />
       </div>
-      <p className="text-white text-base md:text-lg font-light text-center">
+      <p className="text-base font-light text-center text-white md:text-lg">
         {label}
       </p>
     </div>
   );
 
   return (
-    <div ref={ref} className="py-16 md:py-18 bg-[#0118D8] text-center">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#E9DFC3] mb-10 md:mb-16">
+    <div ref={ref} className="py-12 text-center bg-black md:py-18">
+        <h2 className="mb-10 text-3xl font-extrabold text-white sm:text-4xl md:text-5xl lg:text-6xl md:mb-16 font-sora">
           Our Achievement
         </h2>
 
       {/* Grid: Stacks items on mobile (1 column) and displays them side-by-side on desktop (3 columns) */}
-      <div className="grid grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto px-4 py-6">
+      <div className="grid grid-cols-1 px-4 py-6 mx-auto text-white md:grid-cols-3 max-w-7xl">
         
         {/* Stat 1 */}
         <StatBlock 
